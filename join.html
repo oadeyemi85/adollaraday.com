@@ -1,0 +1,172 @@
+<!--------f-----------
+
+    Project 4
+    Name: OLUKAYODE ADEYEMI
+    Date: 23/04/2026
+    Description: This HTML file represents the "Join our Team" page of the "A Dollar A Day" charity website.
+                 It includes:
+                - A search bar
+                - A hero banner
+                - A navigation menu
+                - Sidebar navigation
+                - Multiple content sections
+                - Volunteer form
+                - Footer with dynamic year
+
+--------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Dollar A Day | Join Our Team</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="inner-page">
+
+    <!--SEARCH BAR -->
+    <div id="search-bar">
+        <form>
+            <input type="text" placeholder="Search…" aria-label="Search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+     <!-- BANNER -->
+    <section id="banner">
+        <h1>A DOLLAR A DAY</h1>
+        <p class="division">Winnipeg, Manitoba • Give a dollar, change a day.</p>
+    </section>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feed.html">Feed the Homeless</a></li>
+            <li><a href="clothe.html">Clothe the Homeless</a></li>
+            <li><a href="house.html">House the Homeless</a></li>
+            <li><a href="teach.html">Teach the Homeless</a></li>
+            <li><a href="join.html" class="active">Join our Team</a></li>
+            <li><a href="index.html#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+
+        <div id="home-layout">
+
+            <!-- LEFT SIDEBAR -->
+            <aside id="side-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="feed.html">Feed the Homeless</a></li>
+                    <li><a href="clothe.html">Clothe the Homeless</a></li>
+                    <li><a href="house.html">House the Homeless</a></li>
+                    <li><a href="teach.html">Teach the Homeless</a></li>
+                    <li><a href="join.html">Join Our Team</a></li>
+                    <li><a href="index.html#contact-section">Contact Us</a></li>
+                </ul>
+            </aside>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div id="home-content">
+
+                <section>
+                    <h2>Join Our Team</h2>
+                    <p>
+                        A Dollar A Day is powered by passionate volunteers who believe that small acts of kindness can create big change.
+                        Whether you want to help serve meals, organize clothing drives, support fundraising, or assist with community outreach,
+                        there’s a place for you on our team.
+                    </p>
+                </section>
+
+                <figure class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Volunteers working together">
+                </figure>
+
+                
+
+                <section>
+                    <h3>Volunteer Opportunities</h3>
+                    <ul>
+                        <li>Meal preparation and serving</li>
+                        <li>Clothing sorting and distribution</li>
+                        <li>Shelter support and outreach</li>
+                        <li>Fundraising and event support</li>
+                        <li>Administrative and digital support</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Why Volunteer With Us?</h3>
+                    <p>
+                        You’ll be part of a community that believes in dignity, compassion, and practical support for our neighbours.
+                        Volunteers receive training, support, and the chance to make a real impact in Winnipeg.
+                    </p>
+                </section>
+
+                <section id="contact-section">
+                    <h3>Sign Up to Volunteer</h3>
+                    <p>Fill out the form below and we’ll get in touch with you.</p>
+
+                    <form id="volunteerForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="vName">Full Name:</label>
+                            <input type="text" id="vName" placeholder="John Smith">
+                            <span class="error-message" id="vNameError">Please enter your name (letters only).</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vEmail">Email Address:</label>
+                            <input type="email" id="vEmail" placeholder="somebody@example.com">
+                            <span class="error-message" id="vEmailError">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vPhone">Phone Number (10 digits):</label>
+                            <input type="text" id="vPhone" placeholder="2045551234">
+                            <span class="error-message" id="vPhoneError">Please enter a valid 10-digit phone number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vReason">Tell us why you want to volunteer:</label>
+                            <textarea id="vReason" rows="4" placeholder="Your message here..."></textarea>
+                            <span class="error-message" id="vReasonError">Please enter a reason.</span>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
+
+                        <p id="volunteerSuccess" class="success-message">Thank you for signing up to volunteer!</p>
+
+                    </form>
+
+                </section>
+
+            </div> <!-- end home-content -->
+
+        </div> <!-- end home-layout -->
+
+    </main>
+  
+    <footer id="footer">
+       
+        <p>&copy; <span id="year">2026</span> A Dollar A Day • Winnipeg, Manitoba</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="feed.html">Feed</a> |
+            <a href="clothe.html">Clothe</a> |
+            <a href="house.html">House</a> |
+            <a href="teach.html">Teach</a> |
+            <a href="join.html">Join our Team</a> |
+            <a href="index.html#contact-section">Contact Us</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!--------f-----------
+
+    Project 4
+    Name: OLUKAYODE ADEYEMI
+    Date: 23/04/2026
+    Description: This HTML file represents the homepage of the "A Dollar A Day" charity website.
+                 It includes:
+                - A search bar
+                - A hero banner
+                - A navigation menu
+                - A homepage carousel
+                - Sidebar navigation
+                - Multiple content sections
+                - Contact form
+                - Donation form
+                - Footer with dynamic year
+
+--------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Dollar A Day | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Dollar A Day is a Winnipeg-based charity inviting you to give one dollar a day to support people experiencing homelessness through food, clothing, housing, and education.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+<body class="inner-page">
+    
+    <!--SEARCH BAR -->
+    <div id="search-bar">
+        <form>
+            <input type="text" placeholder="Search…" aria-label="Search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+     <!-- BANNER -->
+    <section id="banner">
+        <h1>A DOLLAR A DAY</h1>
+        <p class="division">Winnipeg, Manitoba • Give a dollar, change a day.</p>
+    </section>
+
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="feed.html">Feed the Homeless</a></li>
+            <li><a href="clothe.html">Clothe the Homeless</a></li>
+            <li><a href="house.html">House the Homeless</a></li>
+            <li><a href="teach.html">Teach the Homeless</a></li>
+            <li><a href="join.html">Join our Team</a></li>
+            <li><a href="index.html#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>    
+    
+    <main id="content">
+        
+        <!-- CAROUSEL START -->
+        <div class="carousel">
+
+            <a href="feed.html">
+                <div class="carousel-slide fade">
+                    <img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhcml0eSUyMGRvbmF0aW9ufGVufDB8fDB8fHww" 
+                             alt="Bowls of soup and bread ready to be served">
+                </div>
+            </a>
+
+            <a href="clothe.html">
+                <div class="carousel-slide fade">
+                    <img src="https://images.unsplash.com/photo-1649887221640-481c952df72e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZyZWUlMjBpbWFnZXMlMjBjbG90aCUyMGRvbmF0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" 
+                             alt="Warm winter clothing hanging on a rack">
+                </div>
+            </a>
+
+            <a href="house.html">
+                <div class="carousel-slide fade">
+                    <img src="https://images.unsplash.com/photo-1559745957-e5f4725dca50?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyZWUlMjBpbWFnZXMlMjBwcm92aWRpbmclMjBzaGVsdGVyfGVufDB8fDB8fHww" 
+                             alt="A simple, cozy bedroom with clean bedding">
+                </div>
+            </a>
+
+            <a href="teach.html">
+                <div class="carousel-slide fade">
+                    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" 
+                             alt="People learning together around a table with notebooks and laptops">
+                </div>
+            </a>
+
+            <a href="join.html">
+                <div class="carousel-slide fade">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Volunteers working together">
+                </div>
+            </a>
+       
+            <div class="carousel-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+        </div>
+        <!-- CAROUSEL END -->
+
+
+        <div id="home-layout">
+
+        <aside id="side-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feed.html">Feed the Homeless</a></li>
+                <li><a href="clothe.html">Clothe the Homeless</a></li>
+                <li><a href="house.html">House the Homeless</a></li>
+                <li><a href="teach.html">Teach the Homeless</a></li>
+                <li><a href="join.html">Join Our Team</a></li>
+                <li><a href="index.html#contact-section">Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <div id="home-content">
+
+            <!-- Homepage sections -->
+
+
+            <section>
+                <h2>Welcome to A Dollar A Day</h2>
+                <h3>Small gifts. Lasting change in Winnipeg.</h3>
+                <p>
+                    A Dollar A Day is a grassroots charity based in Winnipeg, Manitoba. 
+                    Our vision is simple: when many people give a little, no one is left behind.
+                    By donating just one dollar a day, you help provide meals, warm clothing, safe shelter, 
+                    and learning opportunities for neighbours experiencing homelessness in our city.
+                </p>
+                <p>
+                    We partner with local shelters, food banks, and community organizations to make sure every dollar 
+                    is used wisely and transparently. Your daily dollar becomes hot soup on a winter night, 
+                    a clean pair of socks, a bed for someone coming in from the cold, or a literacy class that opens new doors.
+                </p>
+
+                <figure class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1591328757584-e5030e8bd7de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZyZWUlMjBpbWFnZXMlMjBoZWxwJTIwYSUyMG5laWdoYm91cnxlbnwwfHwwfHx8MA%3D%3D" 
+                         alt="Volunteers serving food to people in need">
+                    <figcaption>Every dollar helps us serve another neighbour in Winnipeg.</figcaption>
+                </figure>
+            </section>
+
+            <section class="updates">
+                <h2>Recent Highlights</h2>
+                <article>
+                    <h3>Food Bank Fridays</h3>
+                    <p>
+                        Thanks to daily donors, we now support a weekly “Food Bank Friday” in downtown Winnipeg, 
+                        providing fresh produce, warm meals, and coffee to over 120 people each week.
+                    </p>
+                </article>
+                <article>
+                    <h3>Winter Warmth Drive</h3>
+                    <p>
+                        Our Clothe the Homeless program recently distributed winter jackets, gloves, and thermal socks 
+                        ahead of the coldest months. Your one dollar a day helped fill those bags with dignity and warmth.
+                    </p>
+                </article>
+                <article>
+                    <h3>Pathway to Stability</h3>
+                    <p>
+                        Through House the Homeless and Teach the Homeless, we are supporting transitional housing 
+                        and life-skills workshops that help people move from surviving to thriving.
+                    </p>
+                </article>
+            </section>
+
+            <section id="contact-section">
+                <h2>Contact Us</h2>
+                <p>
+                    Have questions, ideas, or want to partner with us in Winnipeg? 
+                    Send us a message and we’ll get back to you as soon as we can.
+                </p>
+
+                <form id="contactForm" action="index.html" method="post" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                        <span class="error-message" id="nameError">Please enter your name.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (10 digits):</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="2045551234">
+                        <span class="error-message" id="phoneError">Please enter a valid 10-digit phone number (numbers only).</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="somebody@example.com">
+                        <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments / Questions:</label>
+                        <textarea id="comments" name="comments" rows="5" required placeholder="Your text comes here."></textarea>
+                        <span class="error-message" id="commentsError">Please enter a comment or question.</span>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+
+                    <p id="formSuccess" class="success-message">Thank you! Your message has been received.</p>
+                </form>
+            </section>
+
+            <section id="donation-section">
+                <h2>Make a Donation</h2>
+                <p>Your support helps us provide meals, clothing, shelter, and education to neighbours in need.</p>
+
+                <form id="donationForm" novalidate>
+
+                    <!-- PAYMENT METHOD -->
+                    <div class="form-group">
+                        <label>Choose Payment Method:</label>
+
+                        <label>
+                            <input type="radio" name="paymentMethod" value="card" required>
+                            Credit / Debit Card
+                        </label>
+
+                        <label>
+                            <input type="radio" name="paymentMethod" value="bank" required>
+                            Bank Deposit
+                        </label>
+
+                        <span class="error-message" id="paymentMethodError">Please select a payment method.</span>
+                    </div>
+
+                    <!-- CARD PAYMENT FIELDS -->
+                    <div id="cardFields" style="display:none;">
+
+                        <fieldset class="card-details">
+                            <legend>Card Details</legend>
+
+                            <!-- CARD TYPE -->
+                            <div class="card-type-row">
+                                <label>Card Type:</label>
+
+                                <div class="card-type-options">
+
+                                    <label class="card-option">
+                                        <input type="radio" name="cardtype" value="visa">
+                                        <img src="images/visa.gif" alt="Visa">
+                                    </label>
+
+                                    <label class="card-option">
+                                        <input type="radio" name="cardtype" value="mastercard">
+                                        <img src="images/mastercard.gif" alt="Mastercard">
+                                    </label>
+
+                                    <label class="card-option">
+                                        <input type="radio" name="cardtype" value="amex">
+                                        <img src="images/amex.gif" alt="American Express">
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <!-- CARD NUMBER -->
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number:</label>
+                                <input id="cardNumber" type="text" placeholder="1234 5678 9012 3456">
+                                <span class="error-message" id="cardNumberError">Please enter a valid card number.</span>
+                            </div>
+
+                            <!-- EXPIRY + CVV -->
+                            <div class="two-column">
+
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date (MM/YY):</label>
+                                    <input id="expiry" type="text" placeholder="MM/YY">
+                                    <span class="error-message" id="expiryError">Enter a valid expiry date.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cvv">CVV:</label>
+                                    <input id="cvv" type="text" placeholder="123">
+                                    <span class="error-message" id="cvvError">Enter a valid CVV.</span>
+                                </div>
+
+                            </div>
+
+                            <!-- NAME ON CARD -->
+                            <div class="form-group">
+                                <label for="nameOnCard">Name on Card:</label>
+                                <input id="nameOnCard" type="text" placeholder="John Smith">
+                                <span class="error-message" id="nameOnCardError">Please enter the name on the card.</span>
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+                    <!-- BANK DEPOSIT FIELDS -->
+                    <div id="bankFields" style="display:none;">
+
+                        <div class="form-group">
+                            <label for="bankName">Bank Name:</label>
+                            <input type="text" id="bankName" placeholder="e.g., RBC, TD, Scotiabank">
+                            <span class="error-message" id="bankNameError">Please enter your bank name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accountNumber">Account Number:</label>
+                            <input type="text" id="accountNumber" placeholder="Your account number">
+                            <span class="error-message" id="accountNumberError">Please enter your account number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transit">Transit Number:</label>
+                            <input type="text" id="transit" placeholder="12345">
+                            <span class="error-message" id="transitError">Please enter a valid transit number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution">Institution Number:</label>
+                            <input type="text" id="institution" placeholder="123">
+                            <span class="error-message" id="institutionError">Please enter a valid institution number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reference">Payment Reference:</label>
+                            <input type="text" id="reference" placeholder="Donation reference">
+                            <span class="error-message" id="referenceError">Please enter a reference.</span>
+                        </div>
+
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Donate</button>
+                        <button type="reset">Reset</button>
+                    </div>
+
+                    <p id="donationSuccess" class="success-message">Thank you! Your donation has been received.</p>
+
+                </form>
+            </section>
+
+         </div> <!-- end home-content -->
+
+        </div> <!-- end home-layout -->
+    </main>
+
+    <footer id="footer">
+        <p>&copy; <span id="year"></span> A Dollar A Day • Winnipeg, Manitoba</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="feed.html">Feed</a> |
+            <a href="clothe.html">Clothe</a> |
+            <a href="house.html">House</a> |
+            <a href="teach.html">Teach</a> |
+            <a href="join.html">Join our Team</a> |
+            <a href="index.html#contact-section">Contact Us</a>
+        </nav>
+    </footer>
+
+    
+</body>
+</html>

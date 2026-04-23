@@ -1,0 +1,1121 @@
+/********f************
+    
+    Project 4 Stylesheet
+    Name: OLUKAYODE ADEYEMI
+    Date: 23/04/2026
+    Description:
+
+    This stylesheet defines the full visual presentation, layout, 
+    typography, spacing, colors, components, forms, navigation, 
+    sidebar, hero banners, carousel, and responsive behavior for 
+    the "A Dollar A Day" charity website. 
+
+    The CSS is structured into logical sections:
+    - Base reset and global defaults
+    - Header and navigation styling
+    - Content container and typography
+    - Sidebar layout and inner-page structure
+    - Hero banners and carousel
+    - Forms (contact, volunteer, donation)
+    - Buttons and utilities
+    - Responsive design overrides
+
+*********************/
+
+/* Base layout reset — ensures consistent spacing across browsers */
+* {
+    box-sizing: border-box; /* Include padding/border in element width */
+    margin: 0;              /* Remove default margin */
+    padding: 0;             /* Remove default padding */
+}
+
+/* Global body styling */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Modern, clean font stack */
+    line-height: 1.6;        /* Comfortable text spacing */
+    color: #222;             /* Default text color */
+    background-color: #f5f7fa; /* Light gray background for clean look */
+}
+
+/* Header container */
+#header {
+    background: linear-gradient(135deg, #0b7285, #1971c2); /* Blue gradient background */
+    color: #fff;              /* White text */
+    padding: 1.5rem 1rem;     /* Spacing around header content */
+    text-align: center;       /* Center-align header text */
+}
+
+/* Navigation inside header */
+#header nav {
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle dark overlay */
+    margin-top: 1rem;                     /* Space above nav */
+}
+
+/* Header navigation list */
+#header ul {
+    list-style: none;        /* Remove bullets */
+    display: flex;           /* Horizontal layout */
+    flex-wrap: wrap;         /* Wrap items on small screens */
+    justify-content: center; /* Center nav items */
+    padding: 0;              /* Remove padding */
+}
+
+/* Header navigation links */
+#header a {
+    display: block;                 /* Make entire area clickable */
+    padding: 0.75rem 1.25rem;       /* Link spacing */
+    color: #fff;                    /* White text */
+    text-decoration: none;          /* Remove underline */
+    font-weight: 500;               /* Medium weight */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+/* Header link hover effect */
+#header a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover highlight */
+    border-radius: 4px;                         /* Rounded hover shape */
+}
+
+/* Header title styling */
+#branding h1 {
+    font-size: 2rem;       /* Large title */
+    letter-spacing: 0.05em; /* Slight spacing for elegance */
+}
+
+/* Header subtitle */
+#branding p {
+    margin-top: 0.25rem;  /* Space above subtitle */
+    font-size: 0.95rem;   /* Slightly smaller text */
+}
+
+/* ================
+   MAIN NAVIGATION
+   ================ */
+
+/* Main navigation bar container */
+#nav {
+    background: linear-gradient(to bottom, #4fa3d1, #005a84); /* Blue gradient background */
+    margin: 0;        /* Remove default margin */
+    padding: 0;       /* Remove default padding */
+}
+
+/* Navigation list container */
+#nav ul {
+    list-style: none;        /* Remove bullets */
+    display: flex;           /* Horizontal layout */
+    justify-content: center; /* Center nav items */
+    padding: 0;              /* Remove padding */
+    margin: 0;               /* Remove margin */
+}
+
+/* Navigation list items */
+#nav li {
+    border-right: 1px solid #ffffff; /* Divider between nav items */
+}
+
+/* Remove border on last nav item */
+#nav li:last-child {
+    border-right: none; /* No divider on last item */
+}
+
+/* Navigation links */
+#nav a {
+    display: block;          /* Make entire area clickable */
+    padding: 8px 15px;       /* Spacing inside nav links */
+    color: white;            /* White text */
+    text-decoration: none;   /* Remove underline */
+    font-weight: bold;       /* Bold text */
+    font-size: 12px;         /* Small uppercase-style text */
+    letter-spacing: 0.5px;   /* Slight spacing for readability */
+}
+
+/* Hover effect for nav links */
+#nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light hover highlight */
+}
+
+/* ==================
+   CONTENT CONTAINER
+   ================== */
+
+/* Main content wrapper */
+#content {
+    max-width: 960px;                        /* Limit width for readability */
+    margin: 1.5rem auto 2.5rem auto;         /* Center content with spacing */
+    padding: 0 1rem;                         /* Horizontal padding */
+    background-color: #ffffff;               /* White background */
+    border-radius: 8px;                      /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);  /* Soft shadow */
+}
+
+/* Content sections inside #content */
+#content section {
+    padding: 1.5rem 1.5rem 0 1.5rem; /* Top + side padding */
+}
+
+/* Add bottom padding to last section */
+#content section:last-of-type {
+    padding-bottom: 1.5rem; /* Bottom spacing */
+}
+
+/* ===========
+   TYPOGRAPHY
+   =========== */
+
+/* Section titles */
+h2 {
+    font-size: 1.6rem;     /* Large heading */
+    margin-bottom: 0.75rem; /* Space below */
+    color: #0b7285;        /* Blue heading color */
+}
+
+/* Subheadings */
+h3 {
+    font-size: 1.2rem;      /* Medium heading */
+    margin-bottom: 0.75rem; /* Space below */
+    color: #1971c2;         /* Lighter blue */
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 0.9rem; /* Space between paragraphs */
+}
+
+/* ============
+   HERO IMAGES
+   ============ */
+
+/* Hero image container */
+.hero-image {
+    margin: 1.25rem 0; /* Vertical spacing */
+    text-align: center; /* Center image */
+}
+
+/* Hero image styling */
+.hero-image img {
+    max-width: 100%;  /* Responsive width */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Hero image caption */
+.hero-image figcaption {
+    font-size: 0.85rem; /* Small caption text */
+    color: #555;        /* Gray text */
+    margin-top: 0.5rem; /* Space above caption */
+}
+
+/* ======
+   LISTS
+   ====== */
+
+/* Highlighted list container */
+.highlight-list {
+    margin: 0.75rem 0 0.75rem 1.25rem; /* Indent + spacing */
+}
+
+/* List item spacing */
+.highlight-list li {
+    margin-bottom: 0.5rem; /* Space between items */
+}
+
+/* ================
+   UPDATES SECTION
+   ================ */
+
+/* Each update article */
+.updates article {
+    margin-bottom: 1rem; /* Space between updates */
+}
+
+/* =====================
+   CONTACT FORM SECTION
+   ===================== */
+
+/* Contact section wrapper */
+#contact-section {
+    border-top: 1px solid #e9ecef; /* Light top border to separate section */
+    margin-top: 1.5rem;            /* Space above section */
+    padding-top: 1.5rem;           /* Space inside section */
+}
+
+/* Generic form spacing */
+form {
+    margin-top: 1rem; /* Space above form */
+}
+
+/* Form group wrapper */
+.form-group {
+    margin-bottom: 1rem; /* Space between form fields */
+}
+
+/* Form labels */
+label {
+    display: block;        /* Make label take full width */
+    font-weight: 600;      /* Bold label text */
+    margin-bottom: 0.25rem; /* Space below label */
+}
+
+/* Text, phone, email inputs + textarea */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;                     /* Full width fields */
+    padding: 0.5rem;                 /* Inner spacing */
+    border-radius: 4px;              /* Rounded corners */
+    border: 1px solid #ced4da;       /* Light gray border */
+    font-size: 0.95rem;              /* Slightly smaller text */
+    transition: border-color 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease;     /* Smooth focus transitions */
+}
+
+/* Focus styling for inputs */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;            /* Remove default outline */
+    border-color: #1971c2;    /* Blue border on focus */
+    background-color: #e7f5ff; /* Light blue background */
+    color: #0b7285;           /* Blue text */
+}
+
+/* Error field highlight */
+.error-field {
+    border-color: #e03131 !important;      /* Red border */
+    background-color: #fff5f5 !important;  /* Light red background */
+    color: #c92a2a !important;             /* Dark red text */
+}
+
+/* Error message (hidden by default) */
+.error-message {
+    display: none;       /* Hidden until JS adds .visible */
+    color: #e03131;      /* Red text */
+    font-size: 0.85rem;  /* Small text */
+    margin-top: 0.25rem; /* Space above message */
+}
+
+/* Error message when visible */
+.error-message.visible {
+    display: block; /* Show message */
+}
+
+/* Success message styling */
+.success-message {
+    display: none;       /* Hidden until JS shows it */
+    margin-top: 0.75rem; /* Space above message */
+    color: #2b8a3e;      /* Green success text */
+    font-weight: 600;    /* Bold success text */
+}
+
+/* ========
+   BUTTONS
+   ======== */
+
+/* Form button container */
+.form-buttons {
+    margin-top: 0.5rem; /* Space above buttons */
+}
+
+/* Submit + reset buttons */
+button[type="submit"],
+button[type="reset"] {
+    padding: 0.5rem 1.25rem; /* Button padding */
+    margin-right: 0.5rem;    /* Space between buttons */
+    border-radius: 4px;      /* Rounded corners */
+    border: none;            /* Remove border */
+    cursor: pointer;         /* Pointer cursor */
+    font-weight: 600;        /* Bold text */
+    font-size: 0.95rem;      /* Button text size */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #1971c2; /* Blue background */
+    color: #fff;               /* White text */
+}
+
+/* Submit button hover/focus */
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #1864ab; /* Darker blue on hover */
+}
+
+/* Reset button styling */
+button[type="reset"] {
+    background-color: #e9ecef; /* Light gray background */
+    color: #343a40;            /* Dark gray text */
+}
+
+/* Reset button hover/focus */
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+    background-color: #dee2e6; /* Slightly darker gray */
+}
+
+/* =======
+   FOOTER
+   ======= */
+
+/* Footer container */
+#footer {
+    text-align: center;                 /* Center footer text */
+    padding: 1rem 0.5rem 1.5rem 0.5rem; /* Top + bottom spacing */
+    font-size: 0.8rem;                  /* Small footer text */
+    color: #666;                        /* Medium gray text */
+}
+
+/* Footer navigation links */
+#footer nav a {
+    color: #868e96;        /* Light gray link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.8rem;     /* Small text */
+}
+
+/* Footer link hover/focus */
+#footer nav a:hover,
+#footer nav a:focus {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* =====================================
+   RESPONSIVE DESIGN (FIRST BREAKPOINT)
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    /* Content container adjustments */
+    #content {
+        margin: 1rem 0.5rem 2rem 0.5rem; /* Reduce outer spacing */
+        padding: 0.5rem;                /* Reduce inner padding */
+    }
+
+    /* Section padding adjustments */
+    #content section {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    /* Navigation becomes vertical */
+    #nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: stretch;   /* Full width items */
+    }
+
+    /* Nav link styling for vertical layout */
+    #nav a {
+        text-align: center;                         /* Center text */
+        border-top: 1px solid rgba(255,255,255,0.1); /* Divider line */
+    }
+
+    /* Remove top border from first nav item */
+    #nav li:first-child a {
+        border-top: none;
+    }
+}
+
+/* ===========================
+   LARGE SCREEN CONTENT WIDTH
+   =========================== */
+
+@media (min-width: 1024px) {
+    #content {
+        max-width: 1100px; /* Wider content on large screens */
+    }
+}
+
+/* =========
+   CAROUSEL
+   ========= */
+
+/* Carousel container */
+.carousel {
+    position: relative;                       /* Needed for overlay elements */
+    max-width: 100%;                          /* Full width */
+    margin: 1.5rem auto;                      /* Vertical spacing */
+    overflow: hidden;                         /* Hide overflow */
+    border-radius: 8px;                       /* Rounded corners */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);  /* Soft shadow */
+}
+
+/* Each slide */
+.carousel-slide {
+    display: none; /* Hidden by default; JS shows active slide */
+}
+
+/* Slide images */
+.carousel-slide img {
+    width: 100%;       /* Full width */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Fade animation class */
+.fade {
+    animation: fadeEffect 1.2s ease-in-out; /* Smooth fade transition */
+}
+
+/* Fade keyframes */
+@keyframes fadeEffect {
+    from { opacity: 0.4; } /* Start faded */
+    to { opacity: 1; }     /* End fully visible */
+}
+
+/* Carousel dot container */
+.carousel-dots {
+    text-align: center; /* Center dots */
+    margin-top: 0.5rem; /* Space above dots */
+}
+
+/* Individual dots */
+.dot {
+    height: 12px;                     /* Dot size */
+    width: 12px;
+    margin: 0 4px;                    /* Space between dots */
+    background-color: #bbb;           /* Default dot color */
+    border-radius: 50%;               /* Circular dots */
+    display: inline-block;            /* Inline layout */
+    transition: background-color 0.4s ease; /* Smooth hover */
+    cursor: pointer;                  /* Clickable */
+}
+
+/* Active dot */
+.active-dot {
+    background-color: #1971c2; /* Blue active dot */
+}
+
+/* Make entire slide clickable */
+.carousel a {
+    display: block;
+}
+
+/* Limit carousel image height */
+.carousel-slide img {
+    height: 320px;     /* Fixed height */
+    object-fit: cover; /* Crop image nicely */
+    width: 100%;
+}
+
+/* ====================
+   HERO IMAGE (GLOBAL)
+   ==================== */
+
+/* Hero image on all pages */
+.hero-image img {
+    height: 320px;     /* Fixed height */
+    width: 100%;       /* Full width */
+    object-fit: cover; /* Crop image nicely */
+    border-radius: 8px;
+}
+
+/* =====================
+   HOMEPAGE HERO HEADER
+   ===================== */
+
+/* Main hero header */
+#hero-header {
+    height: 320px; /* Hero height */
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"); /* Background image */
+    background-size: cover;       /* Cover entire area */
+    background-position: center;  /* Center image */
+    background-repeat: no-repeat; /* No repeat */
+    position: relative;           /* Needed for overlay */
+    border-bottom: 4px solid #0b7285; /* Blue bottom border */
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45); /* Semi-transparent black overlay */
+    height: 100%;                    /* Full height */
+    width: 100%;                     /* Full width */
+    display: flex;                   /* Center content */
+    flex-direction: column;          /* Stack text vertically */
+    justify-content: center;         /* Center vertically */
+    align-items: center;             /* Center horizontally */
+    text-align: center;              /* Center text */
+    color: #fff;                     /* White text */
+    padding: 1rem;                   /* Inner spacing */
+}
+
+/* Hero title */
+#hero-header h1 {
+    font-size: 2.4rem;     /* Large title */
+    letter-spacing: 0.05em; /* Slight spacing */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+/* Hero subtitle */
+#hero-header p {
+    font-size: 1.1rem; /* Subtitle size */
+    max-width: 600px;  /* Limit width for readability */
+}
+
+/* ================================
+   HOME LAYOUT (SIDEBAR + CONTENT)
+   ================================ */
+
+/* Home layout wrapper */
+#home-layout {
+    display: flex;        /* Sidebar + content side-by-side */
+    gap: 1.5rem;          /* Space between sidebar and content */
+    margin-top: 1.5rem;   /* Space above layout */
+}
+
+/* ========
+   SIDEBAR 
+   ======== */
+
+/* Sidebar container */
+#side-nav {
+    width: 240px;                           /* Fixed width */
+    background: #f8f9fa;                    /* Light gray background */
+    padding: 1rem 1rem;                     /* Inner spacing */
+    border-radius: 8px;                     /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* Soft shadow */
+    height: auto;                           /* Prevent stretching */
+    border: 1px solid #dee2e6;              /* Light border */
+    flex: 0 0 240px;                        /* Prevent resizing */
+    position: sticky;                       /* Stick while scrolling */
+    top: 20px;                              /* Distance from top */
+}
+
+/* Sidebar list */
+#side-nav ul {
+    list-style: none; /* Remove bullets */
+    padding-left: 0;  /* Remove indent */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar list items */
+#side-nav li {
+    margin-bottom: 0.8rem; /* Space between items */
+}
+
+/* Sidebar links */
+#side-nav a {
+    display: block;             /* Full clickable area */
+    padding: 0.55rem 0.5rem;    /* Inner spacing */
+    text-decoration: none;      /* Remove underline */
+    color: #0b7285;             /* Blue text */
+    font-weight: 600;           /* Bold text */
+    border-radius: 6px;         /* Rounded corners */
+    transition: all 0.25s ease; /* Smooth hover */
+    text-align: center;         /* Center text */
+}
+
+/* Sidebar hover effect */
+#side-nav a:hover {
+    background: #d0ebff;        /* Light blue hover */
+    transform: translateX(4px); /* Slide right */
+}
+
+/* Active sidebar link */
+#side-nav a.active {
+    background: #d0ebff;        /* Highlight background */
+    color: #0b7285;             /* Blue text */
+    font-weight: 700;           /* Extra bold */
+    border-left: none;
+    border-top: 4px solid #0b7285; /* Blue top border */
+    padding-left: 1rem;         /* Adjust spacing */
+    padding-top: 0.6rem;
+    text-align: center;
+}
+
+/* =======================
+   SECTION BOXES (GLOBAL)
+   ======================= */
+
+/* Generic section styling */
+section {
+    border: 1px solid #dee2e6;            /* Light border around sections */
+    padding: 1.2rem;                      /* Inner spacing */
+    margin-bottom: 1.5rem;                /* Space between sections */
+    border-radius: 8px;                   /* Rounded corners */
+    background: #ffffff;                  /* White background */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+/* Main content area inside home layout */
+#home-content {
+    flex: 1; /* Take remaining width beside sidebar */
+}
+
+/* Prevent sidebar from stretching vertically */
+#home-layout {
+    align-items: flex-start; /* Align items at the top */
+}
+
+/* Home layout full definition (duplicate block kept as-is) */
+#home-layout {
+    display: flex;            /* Sidebar + content side-by-side */
+    align-items: flex-start;  /* Prevent sidebar stretching */
+    gap: 2rem;                /* Space between sidebar and content */
+    max-width: 1200px;        /* Limit layout width */
+    margin: 2rem auto;        /* Center layout with spacing */
+    padding: 0 1rem;          /* Horizontal padding */
+}
+
+/* Content area takes remaining space */
+#home-content {
+    flex: 1; /* Flexible width */
+}
+
+/* ======================================
+   SEARCH BAR (HAYDEN PLANETARIUM STYLE)
+   ====================================== */
+
+/* Search bar container */
+#search-bar {
+    width: 100%;                 /* Full width */
+    display: flex;               /* Horizontal layout */
+    justify-content: flex-end;   /* Align search bar to the right */
+    padding: 0.75rem 1rem;       /* Outer spacing */
+    background: #f5f7fa;         /* Light background */
+    margin-top: 0;               /* Remove top margin */
+    padding-top: 0.1rem;         /* Slight top spacing */
+}
+
+/* Search bar form layout */
+#search-bar form {
+    display: flex; /* Input + button side-by-side */
+    gap: 0.5rem;   /* Space between input and button */
+}
+
+/* Search input field */
+#search-bar input[type="text"] {
+    padding: 0.45rem 0.75rem; /* Inner spacing */
+    border: 1px solid #ccc;   /* Light border */
+    border-radius: 4px;       /* Slight rounding */
+    font-size: 0.95rem;       /* Text size */
+    width: 220px;             /* Fixed width */
+}
+
+/* Search button */
+#search-bar button {
+    padding: 0.45rem 0.9rem;  /* Button padding */
+    border: none;             /* Remove border */
+    background: #0b7285;      /* Blue background */
+    color: #fff;              /* White text */
+    font-size: 0.9rem;        /* Button text size */
+    cursor: pointer;          /* Pointer cursor */
+    border-radius: 4px;       /* Slight rounding */
+}
+
+/* Search button hover */
+#search-bar button:hover {
+    background: #095c6b; /* Darker blue */
+}
+
+/* ========================================
+   INNER PAGES — SIDEBAR + CONTENT SPACING
+   ======================================== */
+
+/* Sidebar styling on inner pages */
+.inner-page #side-nav {
+    margin-top: 1.5rem; /* Space above sidebar */
+    border: 1px solid #ccc; /* Light border */
+    padding: 1rem;          /* Inner spacing */
+    border-radius: 8px;     /* Rounded corners */
+    background: #ffffff;    /* White background */
+}
+
+/* Sidebar links on inner pages */
+.inner-page #side-nav li a {
+    border: 1px solid #ccc; /* Light border */
+    padding: 0.6rem;        /* Inner spacing */
+    border-radius: 6px;     /* Rounded corners */
+    background: #fff;       /* White background */
+    display: block;         /* Full clickable area */
+    margin-bottom: 0.6rem;  /* Space between links */
+}
+
+/* Hover effect for inner-page sidebar links */
+.inner-page #side-nav li a:hover {
+    background: #e7f5ff; /* Light blue hover */
+}
+
+/* Add spacing above content on inner pages */
+.inner-page #content,
+.inner-page #home-content {
+    margin-top: 1.5rem; /* Space above content */
+}
+
+/* =======================================
+   FORM BUTTONS — CLEAN, MODERN, CENTERED
+   ======================================= */
+
+/* Button container */
+.form-buttons {
+    display: flex;            /* Horizontal layout */
+    justify-content: center;  /* Center buttons */
+    gap: 1rem;                /* Space between buttons */
+    margin-top: 1.5rem;       /* Space above buttons */
+    padding-bottom: 2rem;     /* Space below buttons */
+}
+
+/* Button base styling */
+.form-buttons button {
+    padding: 0.7rem 1.6rem;   /* Button padding */
+    font-size: 1rem;          /* Text size */
+    border-radius: 6px;       /* Rounded corners */
+    border: none;             /* Remove border */
+    cursor: pointer;          /* Pointer cursor */
+    transition: 0.25s ease;   /* Smooth hover */
+    font-weight: 600;         /* Bold text */
+}
+
+/* Submit button */
+.form-buttons button[type="submit"] {
+    background-color: #0b7285; /* Blue background */
+    color: white;              /* White text */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Soft shadow */
+}
+
+/* Submit hover */
+.form-buttons button[type="submit"]:hover {
+    background-color: #0a6171; /* Darker blue */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.20); /* Stronger shadow */
+}
+
+/* Reset button */
+.form-buttons button[type="reset"] {
+    background-color: #dee2e6; /* Light gray */
+    color: #333;               /* Dark text */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10); /* Soft shadow */
+}
+
+/* Reset hover */
+.form-buttons button[type="reset"]:hover {
+    background-color: #ced4da; /* Slightly darker gray */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Stronger shadow */
+}
+
+/* Extra padding for forms */
+#contactForm,
+#donationForm {
+    padding-bottom: 0.2rem; /* Bottom spacing */
+}
+
+/* =======================
+   BANNER (HERO BRANDING)
+   ======================= */
+
+/* Banner container */
+#banner {
+    margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 1rem; /* Space below text */
+}
+
+/* Banner background image */
+#banner {
+    background: url("https://images.unsplash.com/photo-1642092445829-891353085efc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGZyZWUlMjBpbWFnZXMlMjBjYW5hZGlhbiUyMG9uZSUyMGRvbGxhcnxlbnwwfHwwfHx8MA%3D%3D")
+                center/cover no-repeat; /* Cover background */
+    color: white;          /* White text */
+    text-align: center;    /* Center text */
+    padding: 4rem 1rem;    /* Large vertical spacing */
+    border-radius: 0;      /* No rounding */
+    position: relative;    /* Needed for overlay */
+}
+
+/* Banner overlay */
+#banner::before {
+    content: "";                 /* Create overlay */
+    position: absolute;          /* Position over banner */
+    inset: 0;                    /* Cover entire banner */
+    background: rgba(0,0,0,0.45); /* Dark overlay */
+}
+
+/* Ensure banner text appears above overlay */
+#banner h1,
+#banner p {
+    position: relative; /* Lift above overlay */
+    z-index: 2;         /* Ensure visibility */
+}
+
+/* Banner title */
+#banner h1 {
+    font-size: 3rem;      /* Large title */
+    font-weight: 800;     /* Extra bold */
+    letter-spacing: 2px;  /* Spaced letters */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+/* Banner subtitle */
+#banner p {
+    font-size: 1.2rem; /* Subtitle size */
+    font-weight: 500;  /* Medium weight */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =============================
+   ERROR MESSAGE (SECOND BLOCK)
+   ============================= */
+
+/* Error message styling (duplicate kept as-is) */
+.error-message {
+    display: none;       /* Hidden by default */
+    color: #d9534f;      /* Red text */
+    font-size: 0.9rem;   /* Slightly larger text */
+    margin-top: 4px;     /* Space above */
+}
+
+/* Show error message when .visible is added */
+.error-message.visible {
+    display: block;
+}
+
+/* Highlight invalid fields (duplicate kept as-is) */
+.error-field {
+    border: 2px solid #e03131 !important; /* Red border */
+    background-color: #fff5f5 !important; /* Light red background */
+    color: #c92a2a !important;            /* Dark red text */
+}
+
+/* ============================
+   CARD DETAILS (PAYMENT FORM)
+   ============================ */
+
+/* Remove list styling */
+.card-details ol,
+.card-details li {
+    margin: 0;         /* Remove margin */
+    padding: 0;        /* Remove padding */
+    list-style: none;  /* Remove bullets */
+}
+
+/* Card details container */
+.card-details {
+    border: 1px solid #ccc;                 /* Light border */
+    border-radius: 6px;                     /* Rounded corners */
+    padding: 1rem;                           /* Inner spacing */
+    background: #fff;                        /* White background */
+    margin-top: 1rem;                        /* Space above */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);  /* Soft shadow */
+}
+
+/* Card details title */
+.card-details legend {
+    font-size: 1.1rem; /* Title size */
+    font-weight: 700;  /* Bold */
+    color: #0b7285;    /* Blue text */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+/* Card type row */
+.card-type-row {
+    margin-bottom: 1rem; /* Space below */
+}
+
+/* Card type options container */
+.card-type-options {
+    display: flex; /* Horizontal layout */
+    gap: 1rem;     /* Space between options */
+    margin-top: 0.5rem; /* Space above */
+}
+
+/* Individual card option */
+.card-option {
+    display: flex;               /* Icon + text side-by-side */
+    align-items: center;         /* Center vertically */
+    gap: 0.4rem;                 /* Space between icon and text */
+    cursor: pointer;             /* Clickable */
+    padding: 0.35rem 0.5rem;     /* Inner spacing */
+    border: 1px solid #dee2e6;   /* Light border */
+    border-radius: 6px;          /* Rounded corners */
+    background: #f8f9fa;         /* Light gray background */
+    transition: 0.2s ease;       /* Smooth hover */
+}
+
+/* Card option hover */
+.card-option:hover {
+    background: #e7f5ff; /* Light blue hover */
+    border-color: #0b7285; /* Blue border */
+}
+
+/* Card option icon */
+.card-option img {
+    height: 28px;      /* Icon height */
+    width: auto;       /* Auto width */
+    object-fit: contain; /* Keep proportions */
+}
+
+/* ==================
+   TWO-COLUMN LAYOUT
+   ================== */
+
+/* Two-column container */
+.two-column {
+    display: flex; /* Side-by-side layout */
+    gap: 1rem;     /* Space between columns */
+}
+
+/* Each form group inside two-column layout */
+.two-column .form-group {
+    flex: 1; /* Equal width columns */
+}
+
+
+/* ============================================
+   RESPONSIVE: SIDEBAR + HOME LAYOUT (≤ 900px)
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    /* Home layout becomes vertical */
+    #home-layout {
+        flex-direction: column; /* Stack sidebar above content */
+        gap: 1rem;              /* Reduce spacing */
+        padding: 0 1rem;        /* Inner padding */
+    }
+
+    /* Sidebar becomes full width */
+    #side-nav {
+        width: 100%;   /* Full width */
+        position: static; /* Remove sticky behavior */
+        top: auto;        /* Reset top offset */
+        flex: none;       /* Remove fixed width */
+    }
+
+    /* Sidebar list becomes multi-column */
+    #side-nav ul {
+        display: flex;       /* Horizontal layout */
+        flex-wrap: wrap;     /* Wrap items */
+        gap: 0.5rem;         /* Space between items */
+    }
+
+    /* Sidebar items take half width */
+    #side-nav li {
+        flex: 1 1 calc(50% - 0.5rem); /* Two-column layout */
+        margin-bottom: 0;             /* Remove bottom spacing */
+    }
+
+    /* Sidebar links centered */
+    #side-nav a {
+        text-align: center; /* Center text */
+        padding: 0.75rem;   /* Larger tap target */
+    }
+}
+
+/* ============================================
+   RESPONSIVE: CAROUSEL IMAGE HEIGHT (≤ 600px)
+   ============================================ */
+
+@media (max-width: 600px) {
+    .carousel-slide img {
+        height: 200px; /* Reduce height for small screens */
+    }
+}
+
+/* =================================
+   RESPONSIVE: HERO HEADER (≤ 600px)
+   ================================= */
+
+@media (max-width: 600px) {
+
+    /* Reduce hero height */
+    #hero-header {
+        height: 220px;
+    }
+
+    /* Smaller hero title */
+    #hero-header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Smaller hero subtitle */
+    #hero-header p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ======================================
+   RESPONSIVE: FORM TWO-COLUMN (≤ 700px)
+   ====================================== */
+
+@media (max-width: 700px) {
+
+    /* Stack form columns vertically */
+    .two-column {
+        flex-direction: column;
+    }
+}
+
+/* ================================
+   RESPONSIVE: NAVIGATION (≤ 700px)
+   ================================ */
+
+@media (max-width: 700px) {
+
+    /* Nav becomes vertical */
+    #nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: stretch;   /* Full width */
+    }
+
+    /* Remove right border, add bottom border */
+    #nav li {
+        border-right: none;                           /* Remove divider */
+        border-bottom: 1px solid rgba(255,255,255,0.2); /* Add bottom divider */
+    }
+
+    /* Remove bottom border from last item */
+    #nav li:last-child {
+        border-bottom: none;
+    }
+
+    /* Larger tap targets */
+    #nav a {
+        text-align: center; /* Center text */
+        padding: 12px;      /* Larger padding */
+    }
+}
+
+/* =================================
+   RESPONSIVE: SEARCH BAR (≤ 600px)
+   ================================= */
+
+@media (max-width: 600px) {
+
+    /* Center search bar */
+    #search-bar {
+        justify-content: center;
+    }
+
+    /* Wider input field */
+    #search-bar input[type="text"] {
+        width: 60%; /* Expand input width */
+    }
+}
+
+/* ========================================
+   RESPONSIVE: CONTENT CONTAINER (≤ 900px)
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    /* Reduce content padding */
+    #content {
+        margin: 1rem;  /* Smaller outer spacing */
+        padding: 1rem; /* Smaller inner spacing */
+    }
+}
+
+/* =============================
+   RESPONSIVE: FOOTER (≤ 600px)
+   ============================= */
+
+@media (max-width: 600px) {
+
+    /* Footer links wrap nicely */
+    #footer nav a {
+        display: inline-block;     /* Allow wrapping */
+        margin: 0.25rem 0.4rem;    /* Space between links */
+    }
+}
